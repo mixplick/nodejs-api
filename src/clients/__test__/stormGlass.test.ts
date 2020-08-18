@@ -64,7 +64,7 @@ describe('StormGlass client', () => {
         const stormGlass = new StormGlass(mockedAxios);
 
         await expect(stormGlass.fetchPoints(lat, lng)).rejects.toThrow(
-            'Unexpected error returned by the StormGlass service: Error {"errors":["Rate Limit reached"]} Code: 429'
+            'Unexpected error returned by the StormGlass service: Error: {"errors":["Rate Limit reached"]} Code: 429'
         );
 
     });
